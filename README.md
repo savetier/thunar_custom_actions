@@ -75,6 +75,8 @@ File Pattern: ```*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx`
 
 Appears: Other Files
 
+(Install ```unoconv``` first)
+
 ## Convert to ODT
 
 Name: -> ODT
@@ -84,6 +86,8 @@ Command: ```unoconv -f odt %f```
 File Pattern: ```*.doc;*.docx```
 
 Appears: Other Files
+
+(Install ```unoconv``` first)
 
 ## Create JPG
 
