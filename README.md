@@ -8,9 +8,19 @@ My custom actions for the Thunar file manager
 
 Name: Open Terminal here
 
-Command: konsole --workdir %f
+Command: ```konsole --workdir %f```
 
-File Pattern: *
+File Pattern: ```*```
+
+Appears: Directories
+
+## Search in Folder
+
+Name: Search here
+
+Command: ```catfish --path=%f```
+
+File Pattern: ```*```
 
 Appears: Directories
 
@@ -19,9 +29,9 @@ Appears: Directories
 
 Name: Extract here (PZ)
 
-Command: peazip -ext2here %f
+Command: ```peazip -ext2here %f```
 
-File Pattern: *.*
+File Pattern: ```*.*```
 
 Appears: Check all
 
@@ -29,9 +39,9 @@ Appears: Check all
 
 Name: Add to Archive (PZ)
 
-Command: peazip -add2archive %F
+Command: ```peazip -add2archive %F```
 
-File Pattern: *
+File Pattern: ```*```
 
 Appears: Check all
 
@@ -39,9 +49,9 @@ Appears: Check all
 
 Name: Hardlink
 
-Command: ln %f %n" (hardlink)"
+Command: ```ln %f %n" (hardlink)"```
 
-File Pattern: *.*
+File Pattern: ```*.*```
 
 Appears: Check all
 
@@ -49,9 +59,9 @@ Appears: Check all
 
 Name: Hardlink
 
-Command: ln -Ts %f %n" (symlink)"
+Command: ```ln -Ts %f %n" (symlink)"```
 
-File Pattern: *.*
+File Pattern: ```*.*```
 
 Appears: Check all
 
@@ -59,8 +69,38 @@ Appears: Check all
 
 Name: -> PDF
 
-Command: unoconv -f pdf %f
+Command: ```unoconv -f pdf %f```
 
-File Pattern: *.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx
+File Pattern: ```*.doc;*.docx;*.odt;*.odp;*.pps;*.ppt;*.xls;*.xlsx;*.ods;*.pptx```
 
 Appears: Other Files
+
+## Convert to ODT
+
+Name: -> ODT
+
+Command: ```unoconv -f odt %f```
+
+File Pattern: ```*.doc;*.docx```
+
+Appears: Other Files
+
+## Create JPG
+
+Name: > JPG
+
+Command: ```convert %f `basename %f .png`.jpg```
+
+File Pattern: ```*.png, *.PNG```
+
+Appears: Check all
+
+## Create PNG
+
+Name: > PNG
+
+Command: ```convert %f `basename %f .jpg`.png```
+
+File Pattern: ```*.jpg, *.JPG,*.jpeg,*.JPEG```
+
+Appears: Image Files, Other Files
