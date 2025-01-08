@@ -112,3 +112,20 @@ Command: ```convert %f `basename %f .jpg`.png```
 File Pattern: ```*.jpg, *.JPG,*.jpeg,*.JPEG```
 
 Appears: Image Files, Other Files
+
+## Rotate clockwise
+
+Command: ```for file in %F; do tempfile=$(mktemp); (jpegtran -copy all -rotate 90 $file > $tempfile); mv -f $tempfile $file; rm -f $tempfile; done```
+
+File Pattern: ```*.jpg;*.JPG;*.jpeg;*.JPEG```
+
+Appears: Image Files, Other Files
+
+## Use Tesseract OCR on File
+
+Command: tesseract %n %n -l deu
+
+File Pattern: ```*.tif;*.TIF```
+
+Appears: Image Files
+
