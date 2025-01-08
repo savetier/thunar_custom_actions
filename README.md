@@ -31,6 +31,8 @@ Name: Extract here (PZ)
 
 Command: ```peazip -ext2here %f```
 
+```flatpak run --branch=stable --arch=x86_64 --command=peazip --file-forwarding io.github.peazip.PeaZip -ext2here %f```
+
 File Pattern: ```*.*```
 
 Appears: Check all
@@ -40,6 +42,8 @@ Appears: Check all
 Name: Add to Archive (PZ)
 
 Command: ```peazip -add2archive %F```
+
+```flatpak run --branch=stable --arch=x86_64 --command=peazip --file-forwarding io.github.peazip.PeaZip -add2archive %F```
 
 File Pattern: ```*```
 
